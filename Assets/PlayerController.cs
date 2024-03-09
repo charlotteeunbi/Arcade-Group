@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float webPlacementTime = 2f;
     private float currentTime = 0f;
     public PlayerMovement movement;
+
+    public GameObject slider;
 
     public bool isPlacingWeb = false;
     private bool isInWeb = false;
@@ -33,6 +36,8 @@ public class PlayerController : MonoBehaviour
         }
 
         handleSpeed();
+
+        slider.transform.position = new Vector3(transform.position.x-191.917f, transform.position.y+47.25f, 0f); //places slider at correct position
     }
 
     void PlaceWeb()
