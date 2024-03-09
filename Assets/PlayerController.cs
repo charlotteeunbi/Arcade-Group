@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,17 +10,19 @@ public class PlayerController : MonoBehaviour
     public float webPlacementTime = 2f;
     private float currentTime = 0f;
     public PlayerMovement movement;
+    public FluidController fluidController;
 
-    public GameObject slider;
+    //public GameObject slider;
 
     public bool isPlacingWeb = false;
     private bool isInWeb = false;
+    public bool webHasBeenPlaced = false;
 
     // Update is called once per frame
     void Update()
     {
         isPlacingWeb = Input.GetKey(KeyCode.Space);
-        if (isPlacingWeb)
+        if (fluidController.fluidSlider.value >= fluidController.fluidCost && isPlacingWeb)
         {
             //movement.moveSpeed = 2f;
             currentTime += Time.deltaTime;
@@ -27,7 +30,9 @@ public class PlayerController : MonoBehaviour
             {
                 PlaceWeb();
                 currentTime = 0f;
+                
             }
+
         }
         else
         {
@@ -35,14 +40,15 @@ public class PlayerController : MonoBehaviour
             currentTime = 0f;
         }
 
-        handleSpeed();
+       handleSpeed();
 
-        slider.transform.position = new Vector3(transform.position.x-191.917f, transform.position.y+47.25f, 0f); //places slider at correct position
+       // slider.transform.position = new Vector3(transform.position.x-191.917f, transform.position.y+47.25f, 0f); //places slider at correct position
     }
 
     void PlaceWeb()
     {
         Instantiate(webPrefab, transform.position, Quaternion.identity);
+        webHasBeenPlaced = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -65,7 +71,7 @@ public class PlayerController : MonoBehaviour
     void handleSpeed()
     {
         float modifier = 1;
-        if (isPlacingWeb)
+        if (fluidController.fluidSlider.value >= fluidController.fluidCost && isPlacingWeb)
         {
             modifier *= 0.3f;
         }
