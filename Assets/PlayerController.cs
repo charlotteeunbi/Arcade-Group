@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private float currentTime = 0f;
     public PlayerMovement movement;
 
-    private bool isPlacingWeb = false;
+    public bool isPlacingWeb = false;
     private bool isInWeb = false;
 
     // Update is called once per frame
