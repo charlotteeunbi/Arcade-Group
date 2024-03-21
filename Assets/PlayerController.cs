@@ -80,6 +80,6 @@ public class PlayerController : MonoBehaviour
             modifier *= 0.5f;
         }
         //Debug.Log(modifier);
-        movement.moveSpeed = 5 * modifier;
+        movement.moveSpeed = 4 * modifier; //Be sure to change the number value here to the wanted move speed!
     }
 }
