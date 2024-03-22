@@ -6,6 +6,9 @@ public class EnemyMovement : MonoBehaviour
 {
     public Vector3 Target;
     public float speed = 1f;
+    private bool EnemyInWeb = false;
+
+    public WebController webController;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +19,10 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveToTarget();
+        if (!EnemyInWeb)
+        {
+            moveToTarget();
+        }
     }
 
     public void SetTarget(Vector3 target)
@@ -28,4 +34,26 @@ public class EnemyMovement : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, Target, speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Web") && !webController.webInUse)
+        {
+            EnemyInWeb = true;
+            webController.webInUse = true;
+            transform.position = other.transform.position;
+            //TODO: play an animation
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Web"))
+        {
+            EnemyInWeb = false;
+            webController.webInUse = false;
+            //TODO: stop animation
+        }
+    }
+
+
 }

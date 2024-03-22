@@ -171,7 +171,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.022990406, y: 0.04868549}
+  m_Offset: {x: -0.04385674, y: 0.03351015}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -182,7 +182,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.77188456, y: 0.7421323}
+  m_Size: {x: 0.4949324, y: 0.47656167}
   m_EdgeRadius: 0
 --- !u!114 &7159154382695287649
 MonoBehaviour:
@@ -197,7 +197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   webHealthSlider: {fileID: 7379764303662142730}
-  webLife: 5
+  webLife: 10
+  webInUse: 0
 --- !u!1 &412167810847178350
 GameObject:
   m_ObjectHideFlags: 0
