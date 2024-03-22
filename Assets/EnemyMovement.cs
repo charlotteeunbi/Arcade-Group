@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour
 {
     public Vector3 Target;
     public float speed = 1f;
-    private bool EnemyInWeb = false;
+    public bool EnemyInWeb = false;
 
     public WebController webController;
 
@@ -37,6 +37,11 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("Web"))
+        {
+            Debug.Log("enemy enter web");
+            Debug.Log(webController.webInUse);
+        }
         if (other.CompareTag("Web") && !webController.webInUse)
         {
             EnemyInWeb = true;
@@ -45,15 +50,20 @@ public class EnemyMovement : MonoBehaviour
             //TODO: play an animation
         }
     }
-    private void OnTriggerExit2D(Collider2D other)
+    /*private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Web"))
+        {
+            Debug.Log("enemy exit web");
+            Debug.Log(webController.webInUse);
+        }
+        if (other.CompareTag("Web") && EnemyInWeb)
         {
             EnemyInWeb = false;
             webController.webInUse = false;
             //TODO: stop animation
         }
-    }
+    }*/
 
 
 }

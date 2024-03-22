@@ -13,12 +13,14 @@ public class WebController : MonoBehaviour
 
     public bool webInUse = false;
 
+    public EnemyMovement enemyMovement;
+
     // Start is called before the first frame update
     void Start()
     {
         webHealthSlider.maxValue = webLife;
         webHealthSlider.value = webLife;
-        
+        webInUse = false;
     }
 
     // Update is called once per frame
@@ -27,6 +29,9 @@ public class WebController : MonoBehaviour
         time += Time.deltaTime;
         if (time >= webLife) {
             Destroy(gameObject);
+            webInUse = false;
+            enemyMovement.EnemyInWeb = false;
+            //Debug.Log("Setting EnemyInWeb to false");
         }
         else {
             webHealthSlider.value = webLife - time;

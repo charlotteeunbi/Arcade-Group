@@ -199,6 +199,8 @@ MonoBehaviour:
   webHealthSlider: {fileID: 7379764303662142730}
   webLife: 10
   webInUse: 0
+  enemyMovement: {fileID: 5173832475327324494, guid: 16881d292eb14b44bbbf2de9fbafdd65,
+    type: 3}
 --- !u!1 &412167810847178350
 GameObject:
   m_ObjectHideFlags: 0
