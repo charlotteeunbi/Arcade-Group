@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {x: 0, y: 0, z: 0}
   speed: 2
+  EnemyInWeb: 0
   webController: {fileID: 7159154382695287649, guid: ae00c933e8a27db4884814465d98cefa,
     type: 3}
 --- !u!95 &8512535633657665232
