@@ -22,7 +22,12 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            spawnEnemy();
+            float value = Random.Range(0, 5);
+            Debug.Log(value);
+            if (value == 0)
+            {
+                spawnEnemy();
+            }
             yield return new WaitForSeconds(spawnTime);
         }
     }
@@ -31,6 +36,7 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector3 spawnPosition = transform.position;
         Instantiate(Enemy, spawnPosition, Quaternion.identity);
-        Enemy.GetComponent<EnemyMovement>().SetTarget(Target.position);
+        //Enemy.GetComponent<EnemyMovement>().SetTarget(Target.position);
+        //enemyMovement.SetTarget(Target.position);
     }
 }
