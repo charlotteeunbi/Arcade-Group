@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             float value = Random.Range(0, 5);
-            Debug.Log(value);
+            //Debug.Log(value);
             if (value == 0)
             {
                 spawnEnemy();
