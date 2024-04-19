@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: d4697872a6e737a4baf856df11c333fe
+guid: db03b61c98eddd3458058cc10e77f5ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4104082323198202243
-    second: spider_eggs-Sheet_0
+      213: 2871223732890097600
+    second: spider_eggs-Sheet_new_0
   - first:
-      213: 6336893468383776791
-    second: spider_eggs-Sheet_1
+      213: 61244484076333511
+    second: spider_eggs-Sheet_new_1
   - first:
-      213: -7514954508654452306
-    second: spider_eggs-Sheet_2
+      213: 2357500638074152917
+    second: spider_eggs-Sheet_new_2
   - first:
-      213: 4851641026157189587
-    second: spider_eggs-Sheet_3
+      213: 1702887910125538394
+    second: spider_eggs-Sheet_new_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -73,7 +73,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 64
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -85,7 +85,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 64
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -99,13 +99,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spider_eggs-Sheet_0
+      name: spider_eggs-Sheet_new_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,20 +113,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 381503be021a4f830800000000000000
-      internalID: 4104082323198202243
+      spriteID: 0c7d59dc5c2a8d720800000000000000
+      internalID: 2871223732890097600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spider_eggs-Sheet_1
+      name: spider_eggs-Sheet_new_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7101282090b21f750800000000000000
-      internalID: 6336893468383776791
+      spriteID: 7c962d5a88599d000800000000000000
+      internalID: 61244484076333511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spider_eggs-Sheet_2
+      name: spider_eggs-Sheet_new_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea16e68b0b485b790800000000000000
-      internalID: -7514954508654452306
+      spriteID: 5d7aa2af65687b020800000000000000
+      internalID: 2357500638074152917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spider_eggs-Sheet_3
+      name: spider_eggs-Sheet_new_3
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d99fc5eecd745340800000000000000
-      internalID: 4851641026157189587
+      spriteID: a5c075f288fd1a710800000000000000
+      internalID: 1702887910125538394
       vertices: []
       indices: 
       edges: []
