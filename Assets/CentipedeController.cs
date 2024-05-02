@@ -47,6 +47,7 @@ public class CentipedeController : MonoBehaviour
             dying = true;
             //anim.Play("CentipedeDeath");
             //Destroy(gameObject);
+           
         }
     }
 

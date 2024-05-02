@@ -26,6 +26,8 @@ public class WebController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
         time += Time.deltaTime;
         if (time >= webLife) {
             Destroy(gameObject);
@@ -36,6 +38,8 @@ public class WebController : MonoBehaviour
         else {
             webHealthSlider.value = webLife - time;
         }
+
+
     }
 
     /*private void OnTriggerEnter2D(Collider2D other)
@@ -56,4 +60,20 @@ public class WebController : MonoBehaviour
             webInUse = false;
         }
     }*/
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Centipede"))
+        {
+            StartCoroutine(WebGone());
+           
+        }
+    }
+   
+   IEnumerator WebGone() {
+
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
+
+   }
 }
