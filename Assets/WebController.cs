@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class WebController : MonoBehaviour
 {
     public Slider webHealthSlider;
-
+    private FluidController fluidController;
 
     public float webLife = 20f;
     private float time = 0f;
@@ -21,6 +21,8 @@ public class WebController : MonoBehaviour
         webHealthSlider.maxValue = webLife;
         webHealthSlider.value = webLife;
         webInUse = false;
+
+        fluidController = GameObject.Find("Player").GetComponent<FluidController>();
     }
 
     // Update is called once per frame
@@ -73,7 +75,7 @@ public class WebController : MonoBehaviour
    IEnumerator WebGone() {
 
         yield return new WaitForSeconds(0.5f);
+        fluidController.fluidSlider.value += fluidController.fluidCost * 0.8f; //add back some web fluid
         Destroy(gameObject);
-
    }
 }

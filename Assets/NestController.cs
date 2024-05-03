@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NestController : MonoBehaviour
 {
-
+    public Animator camAnim;
     
     // Start is called before the first frame update
     void Start()
@@ -16,5 +16,13 @@ public class NestController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Centipede"))
+        {
+            camAnim.Play("cameraShake");
+        }
     }
 }
