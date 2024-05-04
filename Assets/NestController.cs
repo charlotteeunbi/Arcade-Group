@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NestController : MonoBehaviour
 {
@@ -11,18 +12,26 @@ public class NestController : MonoBehaviour
     public Slider nestHealthSlider;
 
     public int maxHealth;
+    public Color green;
+    public Color yellow;
+    public Color red;
+    public Image image;
+
 
     // Start is called before the first frame update
     void Start()
     {
         nestHealthSlider.maxValue = maxHealth;
         nestHealthSlider.value = maxHealth;
+        image.color = green;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (nestHealthSlider.value == 0) {
+            StartCoroutine(deathTime());
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -38,11 +47,12 @@ public class NestController : MonoBehaviour
             else if (nestHealthSlider.value > (1.0f / 3.0f) * nestHealthSlider.maxValue)
             {
                 nestAnim.Play("NestTwoThirdsHealth");
+                image.color = yellow;
             }
             else
             {
                 nestAnim.Play("NestOneThirdHealth");
-            }
+                image.color = red;            }
 
 
             /*switch (nestHealthSlider.value)
@@ -62,5 +72,11 @@ public class NestController : MonoBehaviour
                 //TODO: go to death scene
             }
         }
+    }
+
+    IEnumerator deathTime() {
+        yield return new WaitForSeconds(0.8f);
+        SceneManager.LoadScene("DeathScene");
+
     }
 }

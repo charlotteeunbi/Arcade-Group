@@ -12,6 +12,6 @@ public class PlayerScoreTextLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textComponent.text = ((int)fluidController.fluidSlider.value).ToString();
+        textComponent.text = "Web Fluid: " + ((int)fluidController.fluidSlider.value).ToString();
     }
 }

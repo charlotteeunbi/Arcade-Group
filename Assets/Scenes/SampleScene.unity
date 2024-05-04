@@ -1960,15 +1960,15 @@ RectTransform:
   m_GameObject: {fileID: 932727812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.76, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 935268102}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 216.2}
+  m_SizeDelta: {x: 410, y: 41.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932727814
 MonoBehaviour:
@@ -2017,8 +2017,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 17.2
+  m_fontSizeBase: 17.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2402,7 +2402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229031336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.037, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 305154048}
@@ -2451,6 +2451,10 @@ MonoBehaviour:
   nestAnim: {fileID: 1229031341}
   nestHealthSlider: {fileID: 144679060}
   maxHealth: 6
+  green: {r: 0.56078434, g: 0.98039216, b: 0.60784316, a: 255}
+  yellow: {r: 0.8584906, g: 0.8320991, b: 0.31181023, a: 255}
+  red: {r: 0.5283019, g: 0.12210752, b: 0.13927065, a: 255}
+  image: {fileID: 539457434}
 --- !u!95 &1229031341
 Animator:
   serializedVersion: 3
