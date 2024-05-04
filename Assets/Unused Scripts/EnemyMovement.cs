@@ -8,7 +8,7 @@ public class EnemyMovement : MonoBehaviour
     public float speed = 1f;
     public bool EnemyInWeb = false;
 
-    public WebController webController;
+    //public WebController webController;
 
     // Start is called before the first frame update
     void Start()
@@ -40,12 +40,13 @@ public class EnemyMovement : MonoBehaviour
         if (other.CompareTag("Web"))
         {
             Debug.Log("enemy enter web");
-            Debug.Log(webController.webInUse);
+            //Debug.Log(webController.webInUse);
         }
-        if (other.CompareTag("Web") && !webController.webInUse)
+        //if (other.CompareTag("Web") && !webController.webInUse)
+        if (other.CompareTag("Web"))
         {
             EnemyInWeb = true;
-            webController.webInUse = true;
+            //webController.webInUse = true;
             transform.position = other.transform.position;
             //TODO: play an animation
         }

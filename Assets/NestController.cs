@@ -61,7 +61,6 @@ public class NestController : MonoBehaviour
             {
                 //TODO: go to death scene
             }
-            Debug.Log(nestHealthSlider.value);
         }
     }
 }

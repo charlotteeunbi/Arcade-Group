@@ -6,21 +6,22 @@ using UnityEngine.UI;
 public class WebController : MonoBehaviour
 {
     public Slider webHealthSlider;
-    private FluidController fluidController;
+    private FluidController fluidController; //the player's fluid controller
 
-    public float webLife = 20f;
+    public float webLife;
     private float time = 0f;
+    public float webDamage; //how much the web gets damaged by
 
-    public bool webInUse = false;
+    //public bool webInUse = false;
 
-    public EnemyMovement enemyMovement;
+    //public EnemyMovement enemyMovement;
 
     // Start is called before the first frame update
     void Start()
     {
         webHealthSlider.maxValue = webLife;
         webHealthSlider.value = webLife;
-        webInUse = false;
+        //webInUse = false;
 
         fluidController = GameObject.Find("Player").GetComponent<FluidController>();
     }
@@ -28,13 +29,11 @@ public class WebController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
         time += Time.deltaTime;
         if (time >= webLife) {
             Destroy(gameObject);
-            webInUse = false;
-            enemyMovement.EnemyInWeb = false;
+            //webInUse = false;
+            //enemyMovement.EnemyInWeb = false;
             //Debug.Log("Setting EnemyInWeb to false");
         }
         else {
@@ -67,15 +66,23 @@ public class WebController : MonoBehaviour
     {
         if (other.CompareTag("Centipede"))
         {
-            StartCoroutine(WebGone());
-           
+            fluidController.fluidSlider.value += fluidController.fluidCost * 0.7f; //add back some web fluid
+
+            time += webDamage;
+            if (time >= webLife)
+            {
+                StartCoroutine(WebGone());
+            }
+            else
+            {
+                webHealthSlider.value = webLife - time;
+            }
         }
     }
    
    IEnumerator WebGone() {
 
         yield return new WaitForSeconds(0.5f);
-        fluidController.fluidSlider.value += fluidController.fluidCost * 0.8f; //add back some web fluid
         Destroy(gameObject);
    }
 }
