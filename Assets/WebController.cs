@@ -66,7 +66,7 @@ public class WebController : MonoBehaviour
     {
         if (other.CompareTag("Centipede"))
         {
-            fluidController.fluidSlider.value += fluidController.fluidCost * 0.7f; //add back some web fluid
+            fluidController.fluidSlider.value += fluidController.fluidCost * 0.6f; //add back some web fluid
 
             time += webDamage;
             if (time >= webLife)
