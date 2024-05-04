@@ -3203,15 +3203,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Web
       objectReference: {fileID: 0}
-    - target: {fileID: 732013437351092011, guid: ae00c933e8a27db4884814465d98cefa,
+    - target: {fileID: 339630230326065902, guid: ae00c933e8a27db4884814465d98cefa,
         type: 3}
-      propertyPath: m_AnchorMax.x
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 732013437351092011, guid: ae00c933e8a27db4884814465d98cefa,
         type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 732013437351092011, guid: ae00c933e8a27db4884814465d98cefa,
+        type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae00c933e8a27db4884814465d98cefa, type: 3}
