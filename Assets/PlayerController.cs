@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public bool isPlacingWeb = false;
     private bool isInWeb = false;
     public bool webHasBeenPlaced = false;
+    public AudioSource webcreate;
 
     // Update is called once per frame
     void Update()
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
             if (currentTime >= webPlacementTime)
             {
                 PlaceWeb();
+                webcreate.Play();
                 currentTime = 0f;
                 
             }

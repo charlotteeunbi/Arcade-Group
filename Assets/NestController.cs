@@ -16,6 +16,8 @@ public class NestController : MonoBehaviour
     public Color yellow;
     public Color red;
     public Image image;
+    public AudioSource hurtnest;
+    
 
 
     // Start is called before the first frame update
@@ -39,6 +41,7 @@ public class NestController : MonoBehaviour
         if (other.CompareTag("Centipede"))
         {
             camAnim.Play("cameraShake");
+            hurtnest.Play();
             nestHealthSlider.value--;
             if (nestHealthSlider.value > (2.0f / 3.0f) * nestHealthSlider.maxValue)
             {
@@ -75,7 +78,8 @@ public class NestController : MonoBehaviour
     }
 
     IEnumerator deathTime() {
-        yield return new WaitForSeconds(0.8f);
+        
+        yield return new WaitForSeconds(0.7f);
         SceneManager.LoadScene("DeathScene");
 
     }

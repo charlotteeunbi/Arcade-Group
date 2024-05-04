@@ -9,6 +9,7 @@ public class CentipedeController : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anim;
     private bool dying = false;
+    public AudioSource killenemy;
    // public Transform target;
 
     // Start is called before the first frame update
@@ -55,6 +56,7 @@ public class CentipedeController : MonoBehaviour
     {
         anim.Play("CentipedeDeath");
         //Destroy(gameObject);
+        killenemy.Play();
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
