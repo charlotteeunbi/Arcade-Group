@@ -86,7 +86,7 @@ public class NestController : MonoBehaviour
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         
         fade.SetTrigger("Start");
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.9f);
         SceneManager.LoadScene("DeathScene");
 
     }
