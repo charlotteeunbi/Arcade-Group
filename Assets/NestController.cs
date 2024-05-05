@@ -11,6 +11,8 @@ public class NestController : MonoBehaviour
     public Animator nestAnim;
     public Slider nestHealthSlider;
 
+    public GameObject explosionPrefab;
+
     public int maxHealth;
     public Color green;
     public Color yellow;
@@ -31,9 +33,10 @@ public class NestController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (nestHealthSlider.value == 0) {
+        //moved to the onTiggerEnter2D function
+        /*if (nestHealthSlider.value == 0) {
             StartCoroutine(deathTime());
-        }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -72,13 +75,14 @@ public class NestController : MonoBehaviour
             }*/
             if (nestHealthSlider.value <= 0)
             {
-                //TODO: go to death scene
+                StartCoroutine(deathTime());
             }
         }
     }
 
     IEnumerator deathTime() {
-        
+
+        Instantiate(explosionPrefab, transform.position, transform.rotation);
         yield return new WaitForSeconds(0.7f);
         SceneManager.LoadScene("DeathScene");
 

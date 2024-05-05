@@ -2451,6 +2451,8 @@ MonoBehaviour:
   camAnim: {fileID: 519420033}
   nestAnim: {fileID: 1229031341}
   nestHealthSlider: {fileID: 144679060}
+  explosionPrefab: {fileID: 3284667274526901287, guid: 54256fc658aa5964a9b01d2d810a8486,
+    type: 3}
   maxHealth: 6
   green: {r: 0.56078434, g: 0.98039216, b: 0.60784316, a: 255}
   yellow: {r: 0.8584906, g: 0.8320991, b: 0.31181023, a: 255}

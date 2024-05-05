@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             float value = Random.Range(0, spawnRarity);
-            Debug.Log(value);
+            //Debug.Log(value);
             if (value < 1)
             {
                 spawnEnemy();
