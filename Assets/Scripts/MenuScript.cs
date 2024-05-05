@@ -7,15 +7,28 @@ using UnityEngine.UI;
 public class MenuScript : MonoBehaviour
 {
     public AudioSource buttonClick;
-    public void playButton() {
-        buttonClick.Play();
-    }
+    
 
     public void restartGame() {
-        SceneManager.LoadScene("TitleScene");
+        StartCoroutine(click2());
         
     }
     public void PlayGame() {
+        StartCoroutine(click());
+    }
+
+    IEnumerator click() {
+
+        buttonClick.Play();
+        yield return new WaitForSeconds(0.3f);
         SceneManager.LoadScene("SampleScene");
+        
+    }
+
+    IEnumerator click2() {
+
+        buttonClick.Play();
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene("TitleScene");
     }
 }

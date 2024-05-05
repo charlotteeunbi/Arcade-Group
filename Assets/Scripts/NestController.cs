@@ -10,6 +10,7 @@ public class NestController : MonoBehaviour
 
     public Animator nestAnim;
     public Slider nestHealthSlider;
+    public Animator fade;
 
     public GameObject explosionPrefab;
 
@@ -83,6 +84,8 @@ public class NestController : MonoBehaviour
     IEnumerator deathTime() {
 
         Instantiate(explosionPrefab, transform.position, transform.rotation);
+        
+        fade.SetTrigger("Start");
         yield return new WaitForSeconds(0.7f);
         SceneManager.LoadScene("DeathScene");
 
