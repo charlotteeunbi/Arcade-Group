@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     public GameObject webPrefab;
-    public float webPlacementTime = 2f;
+    public float webPlacementTime;
     private float currentTime = 0f;
     public PlayerMovement movement;
     public FluidController fluidController;

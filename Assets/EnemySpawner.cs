@@ -10,7 +10,8 @@ public class EnemySpawner : MonoBehaviour
     //GameObject randomEnemy = Enemy[Random.Range(0, enemies.Length)];
     public GameObject Enemy;
     public Transform Target;
-    public float spawnTime;
+    public float spawnRarity;
+    public float timeBetweenSpawns;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +23,20 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            float value = Random.Range(0, 5);
+            float value = Random.Range(0, spawnRarity);
+            Debug.Log(value);
+            if (value < 1)
+            {
+                spawnEnemy();
+            }
+            yield return new WaitForSeconds(timeBetweenSpawns);
+            /*float value = Random.Range(0, 5);
             //Debug.Log(value);
             if (value == 0)
             {
                 spawnEnemy();
             }
-            yield return new WaitForSeconds(spawnTime);
+            yield return new WaitForSeconds(spawnTime);*/
         }
     }
 

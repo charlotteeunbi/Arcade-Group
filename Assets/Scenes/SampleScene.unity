@@ -2816,7 +2816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   webPrefab: {fileID: 339630230326065902, guid: ae00c933e8a27db4884814465d98cefa,
     type: 3}
-  webPlacementTime: 1
+  webPlacementTime: 0.8
   movement: {fileID: 1305047169}
   fluidController: {fileID: 1305047173}
   isPlacingWeb: 0
